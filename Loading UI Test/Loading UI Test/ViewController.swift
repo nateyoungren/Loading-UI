@@ -11,9 +11,9 @@ import Loading_UI
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    @IBAction func buttonTapped(_ sender: UIButton) {
+        let loading = LoadingViewController()
+        
+        present(loading, animated: true) { }
     }
-
 }
