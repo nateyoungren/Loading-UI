@@ -10,6 +10,7 @@
 		773851AA2239982B008CB09A /* Loading_UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 773851A02239982B008CB09A /* Loading_UI.framework */; };
 		773851AF2239982B008CB09A /* Loading_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773851AE2239982B008CB09A /* Loading_UITests.swift */; };
 		773851B12239982B008CB09A /* Loading_UI.h in Headers */ = {isa = PBXBuildFile; fileRef = 773851A32239982B008CB09A /* Loading_UI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		773851F722399ADD008CB09A /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773851F622399ADD008CB09A /* LoadingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		773851A92239982B008CB09A /* Loading UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Loading UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		773851AE2239982B008CB09A /* Loading_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading_UITests.swift; sourceTree = "<group>"; };
 		773851B02239982B008CB09A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		773851F622399ADD008CB09A /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				773851BA2239984C008CB09A /* Other Sources */,
 				773851A42239982B008CB09A /* Info.plist */,
+				773851F622399ADD008CB09A /* LoadingViewController.swift */,
 			);
 			path = "Loading UI";
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 				TargetAttributes = {
 					7738519F2239982B008CB09A = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					773851A82239982B008CB09A = {
 						CreatedOnToolsVersion = 10.1;
@@ -202,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				773851F722399ADD008CB09A /* LoadingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +354,7 @@
 		773851B52239982B008CB09A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -366,6 +372,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nateyoungren.Loading-UI";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -374,6 +381,7 @@
 		773851B62239982B008CB09A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -399,6 +407,7 @@
 		773851B82239982B008CB09A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HBKK7B5HAP;
 				INFOPLIST_FILE = "Loading UITests/Info.plist";
@@ -417,6 +426,7 @@
 		773851B92239982B008CB09A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HBKK7B5HAP;
 				INFOPLIST_FILE = "Loading UITests/Info.plist";
