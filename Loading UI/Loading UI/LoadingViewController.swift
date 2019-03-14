@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class LoadingViewController: UIViewController {
+public class LoadingViewController: UIViewController, CAAnimationDelegate {
     
     override public func viewDidLoad() {
         showCircle()
@@ -34,19 +34,37 @@ public class LoadingViewController: UIViewController {
 
         view.layer.addSublayer(circleLayer)
 
-        animate()
+        animate(keyPath: "strokeEnd")
     }
 
-    private func animate() {
-        circleAnimation.keyPath = "strokeEnd"
+    private func animate(keyPath: String) {
+        circleAnimation.keyPath = keyPath
+        circleAnimation.fromValue = 0
         circleAnimation.toValue = 1
         circleAnimation.duration = 1
         circleAnimation.fillMode = CAMediaTimingFillMode.forwards
         circleAnimation.isRemovedOnCompletion = false
-        circleAnimation.repeatCount = .infinity
+        circleAnimation.delegate = self
         circleAnimation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
 
         circleLayer.add(circleAnimation, forKey: "load")
+    }
+    
+    public func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+        
+        if let anim = anim as? CABasicAnimation, anim.keyPath == "strokeEnd" {
+            circleLayer.strokeStart = 0
+            circleLayer.strokeEnd = 1
+            circleLayer.removeAllAnimations()
+            animate(keyPath: "strokeStart")
+        }
+        
+        if let anim = anim as? CABasicAnimation, anim.keyPath == "strokeStart" {
+            circleLayer.strokeStart = 0
+            circleLayer.strokeEnd = 0
+            circleLayer.removeAllAnimations()
+            animate(keyPath: "strokeEnd")
+        }
     }
 
     public var backgroundColor: UIColor?
