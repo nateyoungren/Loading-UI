@@ -12,7 +12,15 @@ import Loading_UI
 class ViewController: UIViewController {
 
     @IBAction func buttonTapped(_ sender: UIButton) {
+        
         let loading = LoadingViewController()
+        
+/* Customization:
+        loading.color = UIColor.yellow.cgColor
+        loading.size = 50
+        loading.width = 20
+        loading.backgroundColor = UIColor.orange
+ */
         
         present(loading, animated: true) { }
     }
