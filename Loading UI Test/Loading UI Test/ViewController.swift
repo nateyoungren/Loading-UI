@@ -16,10 +16,12 @@ class ViewController: UIViewController {
         let loading = LoadingViewController()
         
 /* Customization:
+ 
         loading.color = UIColor.yellow.cgColor
         loading.size = 50
-        loading.width = 20
+        loading.width = 10
         loading.backgroundColor = UIColor.orange
+
  */
         
         present(loading, animated: true) { }
