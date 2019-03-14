@@ -6,6 +6,6 @@ A loading animation...
 
 let loading = LoadingViewController() \
 loading.color = UIColor.yellow.cgColor \
-loading.size = 50\
-loading.width = 10\
-loading.backgroundColor = UIColor.orange\
+loading.size = 50 \
+loading.width = 10 \
+loading.backgroundColor = UIColor.orange
